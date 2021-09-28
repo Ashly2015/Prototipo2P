@@ -25,14 +25,14 @@ namespace CapaVista
             try
             {
 
-                conAplicacion.insertarLinea(txtCodigo.Text, txtNombre.Text,txtEstatus.Text );
+                conAplicacion.insertarLinea(txtCodigo.Text, txtNombre.Text, txtEstatus.Text);
                 MessageBox.Show("Insercion realizada");
                 funLimpiar();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: Debes llenar todos los campos");
+                MessageBox.Show("Error: " + ex);
             }
             actualizarTabla();
         }
@@ -98,12 +98,31 @@ namespace CapaVista
 
         private void btnActivo_CheckedChanged(object sender, EventArgs e)
         {
-            txtEstatus.Text = "A";
+            txtEstatus.Text = "1";
         }
 
         private void btnInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            txtEstatus.Text = "I";
+            txtEstatus.Text = "0";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombre = "";
+                string estatus="";
+                conAplicacion.buscarLinea(txtCodigo.Text, nombre, estatus);
+                txtNombre.Text = nombre;
+                txtEstatus.Text = estatus;
+                MessageBox.Show("Busqueda exitosa");
+                funLimpiar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
     }
 }

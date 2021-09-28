@@ -11,7 +11,7 @@ namespace CapaControlador
     {
         private Sentencias sn = new Sentencias();
 
-        //frmMantenimientoAplicacion
+        //MantenimientoLinea
         public void insertarLinea(string Id, string Nombre, string estado)
         {
             sn.funInsertarLinea(Id, Nombre, estado);
