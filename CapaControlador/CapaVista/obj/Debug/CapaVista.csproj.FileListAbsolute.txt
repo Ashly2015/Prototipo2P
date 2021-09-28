@@ -14,3 +14,4 @@ C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaContro
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\bin\Debug\CapaModelo.dll
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\bin\Debug\CapaModelo.pdb
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.frmMarca.resources
+C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.frmVentaEncabezado.resources
