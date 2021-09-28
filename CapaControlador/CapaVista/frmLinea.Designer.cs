@@ -55,6 +55,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 13;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -62,6 +63,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 12;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label2
             // 
@@ -72,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(77, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -82,6 +85,7 @@
             this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Codigo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnBuscar
             // 
@@ -154,6 +158,7 @@
             this.txtEstatus.Name = "txtEstatus";
             this.txtEstatus.Size = new System.Drawing.Size(28, 20);
             this.txtEstatus.TabIndex = 24;
+            this.txtEstatus.TextChanged += new System.EventHandler(this.txtEstatus_TextChanged);
             // 
             // gbxEstado
             // 
@@ -166,6 +171,7 @@
             this.gbxEstado.TabIndex = 23;
             this.gbxEstado.TabStop = false;
             this.gbxEstado.Text = "Estatus";
+            this.gbxEstado.Enter += new System.EventHandler(this.gbxEstado_Enter);
             // 
             // btnInactivo
             // 
@@ -202,6 +208,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(347, 150);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codigo_linea
             // 

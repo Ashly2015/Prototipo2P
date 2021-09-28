@@ -24,5 +24,13 @@ namespace CapaVista
 
             frmLinea.Show();
         }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarca frmMarca = new frmMarca();
+            frmMarca.MdiParent = this.MdiParent;
+
+            frmMarca.Show();
+        }
     }
 }

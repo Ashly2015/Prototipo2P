@@ -11,6 +11,6 @@ C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaContro
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\bin\Debug\CapaControlador.pdb
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.frmLinea.resources
-C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.frmProducto.resources
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\bin\Debug\CapaModelo.dll
 C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\bin\Debug\CapaModelo.pdb
+C:\Users\ranbr\Documents\SISTEMAS\ANALISIS DE SISTEMAS II\Prototipo2P\CapaControlador\CapaVista\obj\Debug\CapaVista.frmMarca.resources

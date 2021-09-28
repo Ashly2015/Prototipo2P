@@ -32,5 +32,28 @@ namespace CapaControlador
         {
             sn.funEliminarLinea(id);
         }
+
+
+        //MantenimientoMarca
+        public void insertarMarca(string Id, string Nombre, string estado)
+        {
+            sn.funInsertarMarca(Id, Nombre, estado);
+        }
+
+        public void modificarMarca(string Id, string Nombre, string estado)
+        {
+            sn.funModificarMarca(Id, Nombre, estado);
+        }
+
+        public (string, string) buscarMarca(string id, string nombre, string estado)
+        {
+            sn.funBuscarMarca(id, nombre, estado);
+            return (nombre, estado);
+        }
+
+        public void eliminarMarca(string id)
+        {
+            sn.funEliminarMarca(id);
+        }
     }
 }

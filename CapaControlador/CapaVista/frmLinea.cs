@@ -124,5 +124,40 @@ namespace CapaVista
                 MessageBox.Show("Error: " + ex);
             }
         }
+
+        private void txtEstatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxEstado_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

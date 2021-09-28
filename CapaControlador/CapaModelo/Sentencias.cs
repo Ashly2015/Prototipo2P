@@ -35,7 +35,7 @@ namespace CapaModelo
         {
             try
             {
-                string cadena = "UPDATE sic2.linea set codigo_linea ='" + Id
+                string cadena = "UPDATE sic2.lineas set codigo_linea ='" + Id
               + "',nombre ='" + Nombre + "',estado = '" + estado + "'  where codigo_linea= '" + Id + "';";
 
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
@@ -52,7 +52,7 @@ namespace CapaModelo
         {
             try
             {
-                string cadena = "delete from sic2.linea where codigo_linea ='" + Id + "';";
+                string cadena = "delete from sic2.lineas where codigo_linea ='" + Id + "';";
 
                 OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
                 consulta.ExecuteNonQuery();
@@ -92,90 +92,96 @@ namespace CapaModelo
             
         }
 
-     
 
 
-        //mantenimiento Producto
-        public OdbcDataReader llenarcbxLinea(string sql)
+        //mantenimiento Marca
+
+        public void funInsertarMarca(string Id, string Nombre, string estado)
         {
             try
             {
-                OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
-                OdbcDataReader leer = datos.ExecuteReader();
-                return leer;
+                string cadena = "INSERT INTO" +
+               " `marcas` VALUES (" + "'" + Id + "', '" + Nombre + "' , '" + estado + "');";
+
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                consulta.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return null;
+                Console.WriteLine("Error: " + ex);
             }
         }
 
-        public OdbcDataReader llenarcbxMarca(string sql)
+        public void funModificarMarca(string Id, string Nombre, string estado)
         {
             try
             {
-                OdbcCommand datos = new OdbcCommand(sql, cn.conexion());
-                OdbcDataReader leer = datos.ExecuteReader();
-                return leer;
+                string cadena = "UPDATE sic2.marcas set codigo_linea ='" + Id
+              + "',nombre ='" + Nombre + "',estado = '" + estado + "'  where codigo_marca= '" + Id + "';";
+
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                consulta.ExecuteNonQuery();
             }
             catch (Exception ex)
+
             {
-                Console.WriteLine(ex.Message);
-                return null;
+                Console.WriteLine("Error: " + ex);
             }
         }
 
-        
-        public string consultaLinea(string nombre)
+        public void funEliminarMarca(string Id)
         {
-
-            string id = "";
-            string Query = "select * from `sic2`.`lineas` where nombre_linea='" + nombre + "';";
-
-            OdbcCommand consulta = new OdbcCommand(Query, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-            OdbcDataReader busqueda;
-            busqueda = consulta.ExecuteReader();
-
-            if (busqueda.Read())
+            try
             {
+                string cadena = "delete from sic2.marcas where codigo_marca ='" + Id + "';";
 
-                id = busqueda["codigo_linea"].ToString();
-
+                OdbcCommand consulta = new OdbcCommand(cadena, cn.conexion());
+                consulta.ExecuteNonQuery();
             }
+            catch (Exception ex)
 
-
-            return id;
+            {
+                Console.WriteLine("Error: " + ex);
+            }
         }
 
-        public string consultaMarca(string nombre)
+        public (string, string) funBuscarMarca(string id, string nombre, string estado)
         {
-
-            string id = "";
-            string Query = "select * from `sic2`.`marcas` where nombre_marca='" + nombre + "';";
-
-            OdbcCommand consulta = new OdbcCommand(Query, cn.conexion());
-            consulta.ExecuteNonQuery();
-
-            OdbcDataReader busqueda;
-            busqueda = consulta.ExecuteReader();
-
-            if (busqueda.Read())
+            try
             {
+                string Query = "select * from `sic2`.`marcas` where codigo_marca='" + id + "';";
 
-                id = busqueda["codigo_marca"].ToString();
+                OdbcCommand consulta = new OdbcCommand(Query, cn.conexion());
+                consulta.ExecuteNonQuery();
 
+                OdbcDataReader busqueda;
+                busqueda = consulta.ExecuteReader();
+
+                if (busqueda.Read())
+                {
+                    nombre = busqueda["nombre_marca"].ToString();
+                    estado = busqueda["estatus_marca"].ToString();
+                }
+            }
+            catch (Exception ex)
+
+            {
+                Console.WriteLine("Error: " + ex);
             }
 
+            return (nombre, estado);
 
-            return id;
         }
 
-        
 
-        
+
+
+
     }
+
+        
+
+        
+    
 }
 
