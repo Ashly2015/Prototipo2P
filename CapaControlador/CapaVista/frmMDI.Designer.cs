@@ -35,6 +35,7 @@
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lineaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,8 @@
             // 
             // catalogosToolStripMenuItem
             // 
+            this.catalogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lineaToolStripMenuItem});
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(95, 23);
             this.catalogosToolStripMenuItem.Text = "Catalogos";
@@ -91,6 +94,13 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // lineaToolStripMenuItem
+            // 
+            this.lineaToolStripMenuItem.Name = "lineaToolStripMenuItem";
+            this.lineaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.lineaToolStripMenuItem.Text = "Linea";
+            this.lineaToolStripMenuItem.Click += new System.EventHandler(this.lineaToolStripMenuItem_Click);
+            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,5 +127,6 @@
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lineaToolStripMenuItem;
     }
 }

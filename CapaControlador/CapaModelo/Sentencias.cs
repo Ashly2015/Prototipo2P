@@ -16,7 +16,7 @@ namespace CapaModelo
      
         //mantenimiento Linea
 
-        public void funInsertar(string Id, string Nombre, int estado)
+        public void funInsertarLinea(string Id, string Nombre, string estado)
         {
             string cadena = "INSERT INTO" +
             " `sic2`.`lineas` VALUES (" + "'" + Id + "', '" + Nombre + "' , " + estado + ");";
@@ -25,7 +25,7 @@ namespace CapaModelo
             consulta.ExecuteNonQuery();
         }
 
-        public void funModificar(string Id, string Nombre, int estado)
+        public void funModificarLinea(string Id, string Nombre, string estado)
         {
             string cadena = "UPDATE sic2.linea set codigo_linea ='" + Id
               + "',nombre ='" + Nombre + "',estado = " + estado + "  where pkId= '" + Id + "';";
@@ -42,9 +42,9 @@ namespace CapaModelo
             consulta.ExecuteNonQuery();
         }
 
-        public (string, int) funBuscar(string id, string nombre, int estado)
+        public (string, string) funBuscarLinea(string id, string nombre, string estado)
         {
-            string Query = "select * from `sic2`.`linea` where codigo_linea='" + id + "';";
+            string Query = "select * from `sic2`.`lineas` where codigo_linea='" + id + "';";
 
             OdbcCommand consulta = new OdbcCommand(Query, cn.conexion());
             consulta.ExecuteNonQuery();
@@ -55,12 +55,13 @@ namespace CapaModelo
             if (busqueda.Read())
             {
                 nombre = busqueda["nombre_linea"].ToString();
-                estado = int.Parse(busqueda["estatus_linea"].ToString());
+                estado = busqueda["estatus_linea"].ToString();
             }
 
             return (nombre, estado);
         }
 
+     
 
 
         //mantenimiento Producto

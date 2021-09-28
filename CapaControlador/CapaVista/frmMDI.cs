@@ -16,5 +16,13 @@ namespace CapaVista
         {
             InitializeComponent();
         }
+
+        private void lineaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLinea frmLinea = new frmLinea();
+            frmLinea.MdiParent = this.MdiParent;
+
+            frmLinea.Show();
+        }
     }
 }

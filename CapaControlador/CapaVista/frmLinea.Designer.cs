@@ -106,6 +106,7 @@
             this.btnLimpiar.TabIndex = 21;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -118,6 +119,7 @@
             this.btnEliminar.TabIndex = 20;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -130,6 +132,7 @@
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnInsertar
             // 
@@ -142,6 +145,7 @@
             this.btnInsertar.TabIndex = 18;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // txtEstatus
             // 
@@ -172,6 +176,7 @@
             this.btnInactivo.TabStop = true;
             this.btnInactivo.Text = "Inactivo";
             this.btnInactivo.UseVisualStyleBackColor = true;
+            this.btnInactivo.CheckedChanged += new System.EventHandler(this.btnInactivo_CheckedChanged);
             // 
             // btnActivo
             // 
@@ -183,6 +188,7 @@
             this.btnActivo.TabStop = true;
             this.btnActivo.Text = "Activo";
             this.btnActivo.UseVisualStyleBackColor = true;
+            this.btnActivo.CheckedChanged += new System.EventHandler(this.btnActivo_CheckedChanged);
             // 
             // dataGridView1
             // 
