@@ -90,6 +90,7 @@
             this.btnInactivo.TabStop = true;
             this.btnInactivo.Text = "Inactivo";
             this.btnInactivo.UseVisualStyleBackColor = true;
+            this.btnInactivo.CheckedChanged += new System.EventHandler(this.btnInactivo_CheckedChanged_1);
             // 
             // btnActivo
             // 
@@ -101,13 +102,14 @@
             this.btnActivo.TabStop = true;
             this.btnActivo.Text = "Activo";
             this.btnActivo.UseVisualStyleBackColor = true;
+            this.btnActivo.CheckedChanged += new System.EventHandler(this.btnActivo_CheckedChanged_1);
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnBuscar.Font = new System.Drawing.Font("Castellar", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Location = new System.Drawing.Point(433, 17);
+            this.btnBuscar.Location = new System.Drawing.Point(434, 18);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 30);
             this.btnBuscar.TabIndex = 34;
@@ -126,6 +128,7 @@
             this.btnLimpiar.TabIndex = 33;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnEliminar
             // 
@@ -138,6 +141,7 @@
             this.btnEliminar.TabIndex = 32;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -150,6 +154,7 @@
             this.btnModificar.TabIndex = 31;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnInsertar
             // 
@@ -162,6 +167,7 @@
             this.btnInsertar.TabIndex = 30;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click_1);
             // 
             // txtNombre
             // 

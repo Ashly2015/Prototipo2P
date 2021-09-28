@@ -19,37 +19,8 @@ namespace CapaVista
             CenterToScreen();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                conAplicacion.insertarMarca(txtCodigo.Text, txtNombre.Text, txtEstatus.Text);
-                MessageBox.Show("Insercion realizada");
-                funLimpiar();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-            actualizarTabla();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conAplicacion.modificarMarca(txtCodigo.Text, txtNombre.Text, txtEstatus.Text);
-                MessageBox.Show("Modificacion realizada");
-                funLimpiar();
-                actualizarTabla();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: Debes llenar todos los campos");
-            }
-        }
+        
+    
         public void funLimpiar()
         {
             txtEstatus.Text = "";
@@ -80,20 +51,7 @@ namespace CapaVista
             funLimpiar();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conAplicacion.eliminarMarca(txtCodigo.Text);
-                MessageBox.Show("Eliminacion realizada");
-                funLimpiar();
-                actualizarTabla();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: No has ingresado Id del registro a eliminar");
-            }
-        }
+      
 
         private void btnActivo_CheckedChanged(object sender, EventArgs e)
         {
@@ -157,6 +115,68 @@ namespace CapaVista
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnActivo_CheckedChanged_1(object sender, EventArgs e)
+        {
+            txtEstatus.Text = "1";
+        }
+
+        private void btnInactivo_CheckedChanged_1(object sender, EventArgs e)
+        {
+            txtEstatus.Text = "0";
+        }
+
+        private void btnInsertar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                conAplicacion.insertarMarca(txtCodigo.Text, txtNombre.Text, txtEstatus.Text);
+                MessageBox.Show("Insercion realizada");
+                funLimpiar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            actualizarTabla();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                conAplicacion.modificarMarca(txtCodigo.Text, txtNombre.Text, txtEstatus.Text);
+                MessageBox.Show("Modificacion realizada");
+                funLimpiar();
+                actualizarTabla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Debes llenar todos los campos");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conAplicacion.eliminarMarca(txtCodigo.Text);
+                MessageBox.Show("Eliminacion realizada");
+                funLimpiar();
+                actualizarTabla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: No has ingresado Id del registro a eliminar");
+            }
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            funLimpiar();
         }
     }
 }
